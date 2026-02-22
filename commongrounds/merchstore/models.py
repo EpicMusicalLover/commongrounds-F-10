@@ -12,6 +12,11 @@ class ProductType(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=255)
+    product_type = models.ForeignKey(
+        ProductType,
+        on_delete=models.SET_NULL,
+        null=True,
+    )
     description = models.TextField()
     class Meta:
         ordering = ['name']
