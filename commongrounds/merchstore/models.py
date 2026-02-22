@@ -18,6 +18,7 @@ class Product(models.Model):
         null=True,
     )
     description = models.TextField()
+    price = models.DecimalField(max_digits=10, decimal_places=2)
     class Meta:
         ordering = ['name']
     def __str__(self):
