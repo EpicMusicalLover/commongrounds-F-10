@@ -4,9 +4,9 @@
 <h2>Product List</h2>
 
 <ul>
-    {% for product in products %}
+    {% for product in product_list %}
         <li>
-            <a href="{% url 'product-detail' product.pk %}">{{ product.name }}</a>
+            <a href="{% url 'merchstore:product-detail' product.pk %}">{{ product.name }}</a>
             - ₱{{ product.price }}
         </li>
     {% empty %}
