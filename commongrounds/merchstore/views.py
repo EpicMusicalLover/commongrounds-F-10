@@ -3,12 +3,12 @@ from django.views.generic.list import ListView
 from .models import Product
 
 
-class RecipeListView(ListView):
+class ProductListView(ListView):
     model = Product
     template_name = "pending.html"
 
 
-class RecipeDetailView(DetailView):
+class ProductDetailView(DetailView):
     model = Product
     template_name = "pending.html"
 
