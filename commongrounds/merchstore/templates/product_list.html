@@ -1,0 +1,14 @@
+{% block content %}
+<h1>Product List</h1>
+
+<ul>
+    {% for product in products %}
+        <li>
+            <a href="{% url 'product-detail' product.pk %}">{{ product.name }}</a>
+            - ₱{{ product.price }}
+        </li>
+    {% empty %}
+        <li>No products are available. Try again.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
