@@ -5,12 +5,12 @@ from .models import Product
 
 class ProductListView(ListView):
     model = Product
-    template_name = "pending.html"
+    template_name = "product_list.html"
 
 
 class ProductDetailView(DetailView):
     model = Product
-    template_name = "pending.html"
+    template_name = "product_detail.html"
 
 
 # Create your views here.
