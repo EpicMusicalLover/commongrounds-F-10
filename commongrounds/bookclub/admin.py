@@ -12,7 +12,7 @@ class BookAdmin(admin.ModelAdmin):
     search_fields = ("title", "author",)
     list_display = ("title", "author", "publication_year", "genre",)
     list_filter = ("genre", "publication_year",)
-    ordering = ("-publication_year")
+    ordering = ("-publication_year", )
 
 
 admin.site.register(Genre, GenreAdmin)
