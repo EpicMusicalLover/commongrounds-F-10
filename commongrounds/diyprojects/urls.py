@@ -4,6 +4,7 @@ from .views import ProjectListView, ProjectDetailView
 app_name = 'diyprojects'
 
 urlpatterns = [
-    path('projects', ProjectListView.as_view(), name='project_list'),
-    path('project/<int:pk>', ProjectDetailView.as_view(), name='project_detail'),
+    path('projects/', ProjectListView.as_view(), name='project_list'),
+    path('project/<int:pk>/', ProjectDetailView.as_view(), 
+         name='project_detail'),
 ]
