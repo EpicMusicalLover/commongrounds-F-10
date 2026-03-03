@@ -12,4 +12,4 @@ class ProjectAdmin(admin.ModelAdmin):
     ordering = ('-created_on',)
 
 admin.site.register(ProjectCategory, ProjectCategoryAdmin)
-admin.site.register(ProjectAdmin, ProjectAdmin)
+admin.site.register(Project, ProjectAdmin)
