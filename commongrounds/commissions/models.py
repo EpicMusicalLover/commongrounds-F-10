@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class CommissionType(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
@@ -20,3 +21,6 @@ class Commission(models.Model):
 
     class Meta:
         ordering = ["created_on"]
+
+    def __str__(self):
+        return self.title
