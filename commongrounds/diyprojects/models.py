@@ -8,7 +8,7 @@ class ProjectCategory(models.Model):
 
     class Meta:
         ordering = ["name"]
-        verbose_name_plural = 'Project Categories'
+        verbose_name_plural = "Project Categories"
 
     def __str__(self):
         return self.name
@@ -17,9 +17,7 @@ class ProjectCategory(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=255)
     category = models.ForeignKey(
-        ProjectCategory,
-        on_delete=models.SET_NULL,
-        null=True
+        ProjectCategory, on_delete=models.SET_NULL, null=True
     )
     description = models.TextField()
     materials = models.TextField()
