@@ -1,15 +1,15 @@
 from django.contrib import admin
 from .models import ProjectCategory, Project
 
-class ProjectInline(admin.TabularInline):
-    model = Project
-
 class ProjectCategoryAdmin(admin.ModelAdmin):
-    model = ProjectCategory
-    inlines = [ProjectInline]
+    list_display = ('name', 'description')
+    search_fields = ('name',)
+    ordering = ('name',)
 
 class ProjectAdmin(admin.ModelAdmin):
-    model = Project
+    list_display = ('title', 'category', 'created_on')
+    search_fields = ('title', 'description')
+    ordering = ('-created_on',)
 
 admin.site.register(ProjectCategory, ProjectCategoryAdmin)
 admin.site.register(ProjectAdmin, ProjectAdmin)
