@@ -1,3 +1,18 @@
 {% block content %}
-coggers
+<h1>Commission Requests</h1>
+
+<h2>Commission List</h2>
+
+<ul>
+    {% for commission in commission_list %}
+        <li>
+            <a href="{% url 'commissions:commission-detail' commission.pk %}">
+                {{ commission.title }}
+            </a>
+        </li>
+    {% empty %}
+        <p>No commissions.</p>
+    {% endfor %}
+</ul>
+
 {% endblock %}
