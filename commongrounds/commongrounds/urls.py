@@ -21,5 +21,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('bookclub/', include('bookclub.urls')),
+    path("commissions/", include("commissions.urls", namespace="commissions")),
     path('admin/', admin.site.urls),
 ]
+
+
