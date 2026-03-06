@@ -8,4 +8,6 @@
     <p>Location: {{ event.location }}</p>
     <p>Start Time: {{ event.start_time }}</p>
     <p>End Time: {{ event.end_time }}</p>
+
+    <a href="{% url 'localevents:event-list' %}">Back to the Event List</a>
 {% endblock %}
