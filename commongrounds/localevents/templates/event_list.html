@@ -8,5 +8,8 @@
         <li>
             <a href="{% url 'localevents:event-detail' event.pk %}">{{ event.title }}</a>
         </li>
+    {% empty %}
+        <li>No events are available. Please add events.</li>
+    {% endfor %}
 </ul>
 {% endblock %}
