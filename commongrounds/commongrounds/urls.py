@@ -24,8 +24,10 @@ urlpatterns = [
     path("commissions/", include("commissions.urls", namespace="commissions")),
     path("localevents/", include("localevents.urls", namespace="localevents")),
     path("merchstore/", include("merchstore.urls", namespace="merchstore")),
+    path("diyprojects/", include("diyprojects.urls")),
     path('admin/', admin.site.urls),
 ]
+
 
 
 
