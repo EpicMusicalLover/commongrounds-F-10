@@ -7,8 +7,8 @@
         <li>
             <a href="{% url 'bookclub:book_detail' book.pk %}">{{ book.title }}</a>
         </li>
-    {% endfor %}
     {% empty %}
         <p>No books available.</p>
+    {% endfor %}
 </ul>
 {% endblock %}
